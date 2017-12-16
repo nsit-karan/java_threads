@@ -1,10 +1,8 @@
 package com.threads.java;
 
-public class Runner extends Thread {
-
-	@Override
-	public void run() {
-		
+public class ThreadHelper {
+	
+	public static void ThreadRunLogic() {
 		for (int i = 0; i < 10; i++) {
 			System.out.println("Runner instance " + i);
 			
@@ -16,5 +14,6 @@ public class Runner extends Thread {
 			}
 		}
 	}
-	
+
+
 }

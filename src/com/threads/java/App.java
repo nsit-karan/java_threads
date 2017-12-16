@@ -8,8 +8,16 @@ public class App {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Runner runner1 = new Runner();
-		runner1.start();
+		Thread thread = new Thread(new Runnable() {
+			
+			@Override
+			public void run() {
+				ThreadHelper.ThreadRunLogic();
+
+			}
+		});
+		
+		thread.start();
 	}
 
 }
