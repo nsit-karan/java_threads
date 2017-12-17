@@ -19,6 +19,11 @@ import com.threads.java.ThreadHelper;
  *   thread T2 gets blocked on T1 on stageOne itself and no one can execute stageTwo
  * - hence, synchronized slows down the overall runtime here since stageOne and stageTwo are forced to
  *   go in sequnce even though both can be run in parallel
+ * - note, that synchronized at function level is as good as using 'this' to synchronize, i.e, it will
+ *   lock all the other functions as well for all the other threads.
+ *   
+ *   Fix for this would be to lock critical sections which can run in parallel with different locks so
+ *   that multiple threads can go in parallel without locking the complete object
  */
 public class Worker {
 
