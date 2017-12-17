@@ -5,7 +5,8 @@ package com.threads.java;
  * - if 2 threads are updating the same variable 'count' in a loop, since they are updating
  *   it parallely, the O/P cannot be predicted
  *   Strange : in this case, the count is always 200. It is never going out of sync.
- *             Maybe later versions of java have fixed this code ?
+ *   Solved : problem was that only single CPU was enabled on the VM which was ensuring
+ *            only single thread runs and was never causing a problem
  *             
  *  Fixed code:
  *  - Use synchronized keyword which ensures that a single thread only can call the method

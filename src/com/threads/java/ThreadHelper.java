@@ -14,6 +14,16 @@ public class ThreadHelper {
 			}
 		}
 	}
-
+	
+	/*
+	 * sleep a thread for milliseconds.
+	 * Adding this basic func to avoid try-catch
+	 */
+	public static void sleepThread(long milliSeconds) {
+		try {
+			Thread.sleep(milliSeconds);
+		} catch (InterruptedException e) {
+		}
+	}
 
 }
