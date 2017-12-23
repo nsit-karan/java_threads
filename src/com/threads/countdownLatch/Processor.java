@@ -6,6 +6,7 @@ import java.util.concurrent.Executors;
 
 import com.threads.java.ThreadHelper;
 
+
 public class Processor implements Runnable {
 	
 	private CountDownLatch countDownLatch;
@@ -42,6 +43,10 @@ public class Processor implements Runnable {
 			/*
 			 * This waits for the count to go to 0 and only then comes out of this calls.
 			 * Only after this call does the rest of the code executes
+			 * 
+			 * better to put a timeout on the await call so that it does timeout.
+			 * this is useful in scenarios where the countDown never goes to 0 because
+			 * of whatever reasons
 			 */
 			latch.await();
 		} catch (InterruptedException e) {
