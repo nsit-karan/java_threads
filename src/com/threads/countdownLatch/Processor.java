@@ -48,7 +48,7 @@ public class Processor implements Runnable {
 			e.printStackTrace();
 		}
 		
-		System.out.println("Completed");
+		System.out.println("Dependent threads completed. Main thread can now start");
 	}
 
 
