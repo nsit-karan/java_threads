@@ -4,7 +4,7 @@ public class ProducerConsumerNativeApp {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		final Processor processor = new Processor();
+		final NativeProcessor processor = new NativeProcessor();
 		
 		Thread t1 = new Thread(new Runnable() {
 			
